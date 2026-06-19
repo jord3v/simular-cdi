@@ -243,7 +243,7 @@ class _FormScreenState extends State<FormScreen> {
             ),
             InkWell(
               onTap: () async {
-                final url = Uri.parse('https://github.com/jord3v/simular-cdi');
+                final url = Uri.parse('https://github.com/jord3v/simulador-cdi');
                 if (await canLaunchUrl(url)) {
                   await launchUrl(url, mode: LaunchMode.externalApplication);
                 }
@@ -263,28 +263,7 @@ class _FormScreenState extends State<FormScreen> {
                 ],
               ),
             ),
-            InkWell(
-              onTap: () async {
-                final url = Uri.parse('https://github.com/jord3v/simular-cdi/raw/refs/heads/master/app-release.apk');
-                if (await canLaunchUrl(url)) {
-                  await launchUrl(url, mode: LaunchMode.externalApplication);
-                }
-              },
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(Icons.android, size: 24, color: Color(0xFF10B981)),
-                  const SizedBox(width: 8),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text('INSTALE', style: TextStyle(color: Color(0xFF34D399), fontWeight: FontWeight.bold, fontSize: 9, letterSpacing: 1)),
-                      Text('App Android', style: TextStyle(color: Color(0xFF047857), fontWeight: FontWeight.bold, fontSize: 13)),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+
           ],
         ),
         const SizedBox(height: 24),

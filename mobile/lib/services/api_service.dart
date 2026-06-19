@@ -4,10 +4,7 @@ import 'package:http/http.dart' as http;
 import '../models/simulation.dart';
 
 class ApiService {
-  // Use localhost if running on Web (Edge/Chrome), else use Android Emulator alias
-  static const String baseUrl = kIsWeb 
-      ? 'http://localhost:8787/api/cdi' 
-      : 'http://10.0.2.2:8787/api/cdi';
+  static const String baseUrl = 'https://api.desenvolvimento-0d9.workers.dev/api/cdi';
 
   static Future<SimulationResult> fetchSimulation({
     required double valorInicial,

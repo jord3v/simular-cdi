@@ -71,4 +71,4 @@ O **Simulador CDI Premium** separa cada aporte mensal em uma "subconta" ou "fati
 ---
 
 **Criado Por:** [Jorge Miguel](https://jorgemiguel.wc4.com.br/)
-**Código Fonte:** [GitHub](https://github.com/jord3v/simular-cdi)
+**Código Fonte:** [GitHub](https://github.com/jord3v/simulador-cdi)
