@@ -227,7 +227,27 @@ class ResultsScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(dia.data, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13, color: Color(0xFF94A3B8))),
+                      Row(
+                        children: [
+                          Text(dia.data, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13, color: Color(0xFF94A3B8))),
+                          if (dia.isProjecao) ...[
+                            const SizedBox(width: 6),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                              decoration: BoxDecoration(color: const Color(0xFFFBBF24), borderRadius: BorderRadius.circular(2)),
+                              child: const Text('PROJ', style: TextStyle(color: Color(0xFF78350F), fontSize: 8, fontWeight: FontWeight.w900, letterSpacing: 0.5)),
+                            ),
+                          ],
+                          if (dia.isAporteDay) ...[
+                            const SizedBox(width: 6),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                              decoration: BoxDecoration(color: const Color(0xFF2563EB), borderRadius: BorderRadius.circular(2)),
+                              child: const Text('+ APORTE', style: TextStyle(color: Colors.white, fontSize: 8, fontWeight: FontWeight.w900, letterSpacing: 0.5)),
+                            ),
+                          ],
+                        ],
+                      ),
                       const SizedBox(height: 2),
                       Text(_formatCurrency(dia.resgateLiquido), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF0F172A))),
                     ],
