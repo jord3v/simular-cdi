@@ -243,7 +243,7 @@ class _FormScreenState extends State<FormScreen> {
             ),
             InkWell(
               onTap: () async {
-                final url = Uri.parse('https://github.com/jorgemiguel');
+                final url = Uri.parse('https://github.com/jord3v/simular-cdi');
                 if (await canLaunchUrl(url)) {
                   await launchUrl(url, mode: LaunchMode.externalApplication);
                 }
@@ -265,7 +265,10 @@ class _FormScreenState extends State<FormScreen> {
             ),
             InkWell(
               onTap: () async {
-                // Link do APK futuro
+                final url = Uri.parse('https://github.com/jord3v/simular-cdi/releases/latest/download/app-release.apk');
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(url, mode: LaunchMode.externalApplication);
+                }
               },
               child: Row(
                 mainAxisSize: MainAxisSize.min,
